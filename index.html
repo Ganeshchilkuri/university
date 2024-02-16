@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ef6db5154f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="https://static.wixstatic.com/media/6685d7_3d4e7a3b47f645e6b8cada0ebadaae63~mv2.png/v1/fill/w_212,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MRU-Logo2.png"
+                class="logo">
+            <ul id="Sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="./project_6/project 6 (multi-pages)/page2.html">Faculty</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div id="header">
+        <div class="container">
+
+            <div class="header-text">
+                <h1><span>Department of Computer Science Engineering</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------about--------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <h1 class="subtitle">About Computer Science and Engineering</h1>
+                <div class="col">
+                <div class="about-col-1">
+                <img
+                    src="https://static.wixstatic.com/media/0c0246_7f184faf1ab149d98a3afd56fe33c0aa~mv2.jpg/v1/fill/w_433,h_289,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/cse%202.jpg">
+                </div>
+                <div class="about-col-2">
+                    <img src="https://static.wixstatic.com/media/0c0246_8a9e99ebe7ee4c458782203abcc47694~mv2.jpg/v1/fill/w_434,h_289,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0c0246_8a9e99ebe7ee4c458782203abcc47694~mv2.jpg" alt="">
+                </div>
+            </div>
+                <p>The Department of Computer Science and Engineering has eminent faculty with a blend from Academics
+                    and industry with varied specializations to impart their skill on latest technologies for B.Tech
+                    students. The department offers a Doctoral program (Ph.D) in Computer Science and Engineering and
+                    working on emerging areas. Center of Excellence Labs have been functioning on cutting edge
+                    technologies such as Artificial Intelligence & Machine Learning, IoT, Cyber Security, Cloud & Fog
+                    Computing and Software Engineering. Department faculty has been executing several funded research
+                    projects. Had MoUs with reputed MNCs such as IBM, Microsoft, CISCO etc to be in tune with industry
+                    developments and requirements."
+                </p>
+                <div class="info">
+                <div class="tab-titles">
+                    <p class="tab-links active-links" onclick="opentab('Skills')">Why Choose MRUH CSE</p>
+                    <p class="tab-links" onclick="opentab('CW')">Focus Areas:</p>
+                    <p class="tab-links" onclick="opentab('Education')">
+                        Innovative Pedagogies:</p>
+                </div>
+            <div class="about-col-1">
+                <div class="tab-contents active-tabs" id="Skills">
+                    <ul>
+                        <li>Qualified & Experienced Faculty</li>
+                        <li>Industry ready course content</li>
+                        <li>Course delivery through real world applications</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="CW">
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Speech Recognition Technologies</li>
+                        <li>Robotic Applications</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li>On-demand video lecture streaming</li>
+                        <li>Discussion forums for doubts clarification</li>
+                        <li>Course projects towards realizable prototypes.</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------contact------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact us</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> admissions@mallareddyuniversity.ac.in</p>
+                    <p><i class="fa-solid fa-phone"></i>  94971-94971</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/mallareddyuniversity/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/MallaReddyUniversity"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169 Ganesh Chilkuri, Made with <i class="fa-solid fa-heart"></i>
+        </div>
+        </p>
+    </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove('active-links');
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove('active-tabs');
+            }
+            event.currentTarget.classList.add('active-links');
+            document.getElementById(tabname).classList.add('active-tabs');
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("Sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxu7FDYaawyMeoXQ3LWmUJ8lhlAr_MtfoHE6fX82TylNatvOmJic-HYdRY1lkBeADj1EA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent succesfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
